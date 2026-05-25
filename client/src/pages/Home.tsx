@@ -292,7 +292,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-5">
           <div className="text-center mb-14">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>How it works</span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Simple enough to use on the route</h2>
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Built for the route, not the office</h2>
             <p className="text-gray-500">No training needed. If you can use a spreadsheet, you can use Snaxology — and it's a lot faster.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
