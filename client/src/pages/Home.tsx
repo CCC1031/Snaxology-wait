@@ -180,7 +180,7 @@ export default function Home() {
       >
         {/* Background video */}
         <video
-          src="https://res.cloudinary.com/dy4bqxt8p/video/upload/v1779622196/new107_qhrklf.mp4"
+          src="https://res.cloudinary.com/dy4bqxt8p/video/upload/v1779622271/02_u2efg7.mp4"
           autoPlay
           muted
           loop
