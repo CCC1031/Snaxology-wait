@@ -180,7 +180,7 @@ export default function Home() {
       >
         {/* Background video */}
         <video
-          src="/manus-storage/vending-hero-hd_70c0d5af.mp4"
+          src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663676595920/GiBiLcOwxlxPRmOh.mp4"
           autoPlay
           muted
           loop
