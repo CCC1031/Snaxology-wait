@@ -35,7 +35,7 @@ export default function Home() {
   const toggleInterest = (v: string) =>
     setInterests((prev) => prev.includes(v) ? prev.filter((x) => x !== v) : [...prev, v]);
 
-  const SHEET_URL = "https://script.google.com/macros/s/AKfycbwQQeHsAeFv82hwdwBQGgmgj2w2kQ2VjG1Ei5Mpg0UDH580n8Bb-xBrULWb8mPz1fBrzA/exec";
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycby1nik5Zya205VV_8NQl3961eZ-MXU7bsgkJU1TPCtEErDIwK0ZLBlb-3WoIPTVeU3u/exec";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
