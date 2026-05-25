@@ -363,7 +363,7 @@ export default function Home() {
         <div className="max-w-2xl mx-auto px-5">
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>FAQ</span>
-            <h2 className="text-4xl font-extrabold text-gray-900">Questions we get a lot</h2>
+            <h2 className="text-4xl font-extrabold text-gray-900">Common Questions</h2>
           </div>
           <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl px-6">
             {faqs.map(({ q, a }) => <FaqItem key={q} q={q} a={a} />)}
