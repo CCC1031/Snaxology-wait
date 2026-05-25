@@ -170,48 +170,57 @@ export default function Home() {
       </nav>
 
       {/* ── HERO ────────────────────────────────────────────────────────── */}
-      <section id="hero" className="relative overflow-hidden bg-[#f5f5f3]">
-        {/* Hero text overlay */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-8">
-          <div className="grid md:grid-cols-2 gap-10 items-center mb-8">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-sm font-medium mb-6" style={{ background: "rgba(227,30,36,0.08)", color: TEAL }}>
-                <span className="w-2 h-2 rounded-full inline-block" style={{ background: TEAL }} />
-                Early access now open
-              </div>
-              <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-5 text-gray-900">
-                Run your vending business
-                <br />
-                <span className="relative inline-block" style={{ color: TEAL }}>
-                  like a pro.
-                  <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 300 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 6 Q75 2 150 5 Q225 8 298 4" stroke={TEAL} strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                  </svg>
-                </span>
-              </h1>
-              <p className="text-lg text-gray-600 max-w-md mb-8 leading-relaxed">
-                Track your inventory, manage your clients, and know exactly when each machine was last stocked — all in one platform built for vending operators.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 mb-6">
-                <button onClick={() => scrollTo("waitlist")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: "#111827" }}>
-                  Get early access →
-                </button>
-                <button onClick={() => scrollTo("how")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-gray-700 text-sm border border-gray-300 bg-white hover:border-gray-400 transition-all active:scale-95">
-                  See how it works ↓
-                </button>
-              </div>
-              <div className="flex flex-wrap gap-5 text-sm text-gray-500">
-                {[{ icon: "🏪", label: "Micro markets & vending" }, { icon: "📦", label: "Inventory tracking" }, { icon: "👥", label: "Built-in CRM" }].map(({ icon, label }) => (
-                  <div key={label} className="flex items-center gap-1.5"><span>{icon}</span><span className="font-medium">{label}</span></div>
-                ))}
-              </div>
-            </div>
-            <div className="hidden md:block" />
+      <section
+        id="hero"
+        className="relative overflow-hidden"
+        style={{
+          clipPath: "polygon(0 0, 92% 0, 100% 6%, 100% 100%, 30% 100%, 22% 94%, 0 94%)",
+          minHeight: "640px",
+        }}
+      >
+        {/* Background video */}
+        <video
+          src="https://res.cloudinary.com/dy4bqxt8p/video/upload/v1779622271/02_u2efg7.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Dark overlay so text is readable */}
+        <div className="absolute inset-0 bg-black/60" />
+        {/* Centered hero content */}
+        <div className="relative z-10 max-w-4xl mx-auto px-5 pt-20 pb-28 text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-sm font-medium mb-8" style={{ background: "rgba(227,30,36,0.25)", color: "#ff8a8e" }}>
+            <span className="w-2 h-2 rounded-full inline-block" style={{ background: "#ff8a8e" }} />
+            Early access now open
           </div>
-        </div>
-        {/* Video tab component as the visual centerpiece */}
-        <div className="max-w-7xl mx-auto px-6 pb-16">
-          <ClippedVideoTab />
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
+            Run your vending business
+            <br />
+            <span className="relative inline-block" style={{ color: TEAL }}>
+              like a pro.
+              <svg className="absolute -bottom-1 left-0 w-full" viewBox="0 0 300 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 6 Q75 2 150 5 Q225 8 298 4" stroke={TEAL} strokeWidth="2.5" strokeLinecap="round" fill="none" />
+              </svg>
+            </span>
+          </h1>
+          <p className="text-lg text-white/80 max-w-xl mx-auto mb-10 leading-relaxed">
+            Track your inventory, manage your clients, and know exactly when each machine was last stocked — all in one platform built for vending operators.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
+            <button onClick={() => scrollTo("waitlist")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
+              Get early access →
+            </button>
+            <button onClick={() => scrollTo("how")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm border border-white/40 bg-white/10 hover:bg-white/20 transition-all active:scale-95">
+              See how it works ↓
+            </button>
+          </div>
+          <div className="flex flex-wrap justify-center gap-5 text-sm text-white/70">
+            {[{ icon: "🏪", label: "Micro markets & vending" }, { icon: "📦", label: "Inventory tracking" }, { icon: "👥", label: "Built-in CRM" }].map(({ icon, label }) => (
+              <div key={label} className="flex items-center gap-1.5"><span>{icon}</span><span className="font-medium">{label}</span></div>
+            ))}
+          </div>
         </div>
       </section>
 
