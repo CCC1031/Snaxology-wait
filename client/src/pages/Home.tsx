@@ -229,7 +229,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-5">
           <div className="text-center mb-14">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: "#fef2f2", color: "#dc2626" }}>The Problem</span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Sound familiar?</h2>
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Still running on spreadsheets?</h2>
             <p className="text-gray-500 max-w-md mx-auto">Most operators run their business out of spreadsheets, sticky notes, and memory. Snaxology replaces all of that.</p>
           </div>
           <div className="space-y-4">
