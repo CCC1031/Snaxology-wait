@@ -178,23 +178,15 @@ export default function Home() {
           minHeight: "640px",
         }}
       >
-        {/* Background YouTube video — AI Smart Cooler */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-          <iframe
-            src="https://www.youtube.com/embed/ACeqXe5JAeI?autoplay=1&mute=1&loop=1&playlist=ACeqXe5JAeI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&start=0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            className="absolute top-1/2 left-1/2"
-            style={{
-              transform: 'translate(-50%, -50%)',
-              width: '177.78vh',
-              minWidth: '100%',
-              height: '56.25vw',
-              minHeight: '100%',
-              border: 'none',
-            }}
-          />
-        </div>
+        {/* Background video */}
+        <video
+          src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663676595920/GiBiLcOwxlxPRmOh.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         {/* Dark overlay so text is readable */}
         <div className="absolute inset-0 bg-black/60" />
         {/* Centered hero content */}
