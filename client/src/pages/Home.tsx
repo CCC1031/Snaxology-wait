@@ -98,13 +98,13 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: "#111827" }} className="min-h-screen bg-white">
+    <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: "#1a0a0a" }} className="min-h-screen bg-background">
 
       {/* ── NAV ─────────────────────────────────────────────────────────── */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100" style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
+      <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-gray-100" style={{ background: 'oklch(0.978 0.006 80 / 0.92)', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
         <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => scrollTo("hero")}>
-            <div className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-black text-base" style={{ background: TEAL }}>S</div>
+              <div className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-black text-base" style={{ background: TEAL }}>v</div>
             <span className="font-bold text-lg text-gray-900">Snaxology</span>
           </div>
           <div className="hidden md:flex items-center gap-7">
@@ -180,7 +180,7 @@ export default function Home() {
       >
         {/* Background video */}
         <video
-          src="https://res.cloudinary.com/dy4bqxt8p/video/upload/v1779622271/02_u2efg7.mp4"
+          src="/manus-storage/vending-hero-hd_70c0d5af.mp4"
           autoPlay
           muted
           loop
@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* ── PROBLEM ─────────────────────────────────────────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-5xl mx-auto px-5">
           <div className="text-center mb-14">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: "#fef2f2", color: "#dc2626" }}>The Problem</span>
@@ -239,7 +239,7 @@ export default function Home() {
               { problem: "No way to know if a location is actually worth keeping.", solution: "Location analytics coming soon — data to help you evaluate and grow your route." },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="flex flex-col sm:flex-row items-center gap-3">
-                <div className="flex-1 w-full flex items-start gap-3 rounded-xl p-4" style={{ background: "#fef2f2" }}>
+                <div className="flex-1 w-full flex items-start gap-3 rounded-xl p-4" style={{ background: "#fde8e9" }}>
                   <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "#fee2e2" }}>
                     <span className="text-red-500 text-sm font-bold">✕</span>
                   </div>
@@ -249,7 +249,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white text-sm font-bold" style={{ background: "#16a34a" }}>→</div>
-                <div className="flex-1 w-full flex items-start gap-3 rounded-xl p-4" style={{ background: "#f0fdf4" }}>
+                <div className="flex-1 w-full flex items-start gap-3 rounded-xl p-4" style={{ background: "#ecfdf5" }}>
                   <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: "rgba(22,163,74,0.15)" }}>
                     <span style={{ color: "#16a34a" }} className="text-sm font-bold">✓</span>
                   </div>
@@ -288,7 +288,7 @@ export default function Home() {
       </section>
 
       {/* ── HOW IT WORKS ────────────────────────────────────────────────── */}
-      <section id="how" className="py-20 bg-white">
+      <section id="how" className="py-20 bg-background">
         <div className="max-w-5xl mx-auto px-5">
           <div className="text-center mb-14">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>How it works</span>
@@ -301,7 +301,7 @@ export default function Home() {
               { num: "2", icon: "📦", title: "Log restocks and visits", desc: "Every time you service a machine, log what you stocked and when. Snaxology tracks the history so you always know where things stand." },
               { num: "3", icon: "📊", title: "Manage clients and grow", desc: "Use the built-in CRM to stay on top of client relationships. Upcoming: location analytics to help you evaluate placements and find new ones." },
             ].map(({ num, icon, title, desc }) => (
-              <div key={num} className="rounded-2xl p-7 border border-gray-100" style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.05)" }}>
+              <div key={num} className="rounded-2xl p-7 border border-gray-200" style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.04)", background: "oklch(0.99 0.003 80)" }}>
                 <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm mb-5" style={{ background: TEAL }}>{num}</div>
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4" style={{ background: TEAL_LIGHT }}>{icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2 text-lg">{title}</h3>
@@ -313,7 +313,7 @@ export default function Home() {
       </section>
 
       {/* ── FEATURES ────────────────────────────────────────────────────── */}
-      <section id="features" className="py-20" style={{ background: "#f9fafb" }}>
+      <section id="features" className="py-20" style={{ background: "oklch(0.965 0.008 80)" }}>
         <div className="max-w-5xl mx-auto px-5">
           <div className="text-center mb-14">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>Features</span>
@@ -329,7 +329,7 @@ export default function Home() {
               { icon: "📍", title: "Location analytics (coming soon)", desc: "Data-driven insights on each placement — foot traffic, revenue benchmarks, and recommendations to help you grow your route." },
               { icon: "📤", title: "CSV import & export", desc: "Bring in your existing machine list and client data from any spreadsheet. Your data is always yours to take with you." },
             ].map(({ icon, title, desc }) => (
-              <div key={title} className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-red-200 transition-colors" style={{ boxShadow: "0 1px 6px rgba(0,0,0,0.04)" }}>
+              <div key={title} className="rounded-2xl p-6 border border-gray-200 hover:border-red-200 transition-colors" style={{ boxShadow: "0 1px 6px rgba(0,0,0,0.04)", background: "oklch(0.99 0.003 80)" }}>
                 <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl mb-4" style={{ background: TEAL_LIGHT }}>{icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
@@ -359,13 +359,13 @@ export default function Home() {
       </section>
 
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
-      <section id="faq" className="py-20 bg-white">
+      <section id="faq" className="py-20 bg-background">
         <div className="max-w-2xl mx-auto px-5">
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>FAQ</span>
             <h2 className="text-4xl font-extrabold text-gray-900">Common Questions</h2>
           </div>
-          <div className="divide-y divide-gray-100 border border-gray-100 rounded-2xl px-6">
+          <div className="divide-y divide-gray-100 border border-gray-200 rounded-2xl px-6" style={{ background: "oklch(0.99 0.003 80)" }}>
             {faqs.map(({ q, a }) => <FaqItem key={q} q={q} a={a} />)}
           </div>
         </div>
