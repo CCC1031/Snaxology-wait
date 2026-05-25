@@ -2,10 +2,10 @@
 nixPkgs = ["nodejs_20"]
 
 [phases.install]
-cmds = ["npm install -g pnpm && pnpm install"]
+cmds = ["corepack enable && corepack prepare pnpm@latest --activate && pnpm install"]
 
 [phases.build]
 cmds = ["pnpm build"]
 
 [start]
-cmd = "npx serve dist/public -p $PORT"
+cmd = "npx serve dist/public -l tcp://0.0.0.0:$PORT"
