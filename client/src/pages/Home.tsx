@@ -180,7 +180,7 @@ export default function Home() {
       >
         {/* Background video */}
         <video
-          src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663676595920/GiBiLcOwxlxPRmOh.mp4"
+          src="https://res.cloudinary.com/dy4bqxt8p/video/upload/v1779622196/new107_qhrklf.mp4"
           autoPlay
           muted
           loop
