@@ -374,7 +374,7 @@ export default function Home() {
       {/* ── WAITLIST ─────────────────────────────────────────────────────── */}
       <section id="waitlist" className="py-20" style={{ background: TEAL_DEEP }}>
         <div className="max-w-lg mx-auto px-5 text-center">
-          <h2 className="text-4xl font-extrabold text-white mb-3">Join the waitlist</h2>
+          <h2 className="text-4xl font-extrabold text-white mb-3">Get access</h2>
           <p className="text-red-200/70 mb-10 text-sm leading-relaxed">
             Early access is limited. Get in now and be first to know when we launch — plus a special founding member rate for operators who join early.
           </p>
@@ -431,7 +431,7 @@ export default function Home() {
                 }}
               >
                 <span className="flex items-center justify-center gap-2">
-                  Join the waitlist
+                  Get access
                   <span
                     className="inline-block transition-transform duration-200 group-hover:translate-x-1"
                     style={{ fontSize: "1rem" }}
