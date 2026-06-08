@@ -378,7 +378,7 @@ export default function Home() {
         <div className="max-w-lg mx-auto px-5 text-center">
           <h2 className="text-4xl font-extrabold text-white mb-4">Ready to run your route smarter?</h2>
           <p className="text-red-200/70 mb-10 text-base leading-relaxed">
-            Snaxology is live. Create your account and start managing your machines, clients, and inventory — all in one place.
+            Lifetime access for just <span className="text-white font-bold">$47</span> — available until July 31st. Lock in your rate before the price goes up.
           </p>
           <a
             href="https://app.snaxology.ai/"
