@@ -131,7 +131,7 @@ export default function Home() {
               onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
               onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
             >
-              Join waitlist
+              Get Access
             </button>
           </div>
           <button className="md:hidden p-2 text-gray-600" onClick={() => setNavOpen(!navOpen)}>
@@ -164,7 +164,7 @@ export default function Home() {
               }}
               onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
               onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
-            >Join waitlist</button>
+            >Get Access</button>
           </div>
         )}
       </nav>
