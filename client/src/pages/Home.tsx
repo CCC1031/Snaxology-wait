@@ -111,28 +111,29 @@ export default function Home() {
             {[{ label: "How it works", id: "how" }, { label: "Features", id: "features" }, { label: "FAQ", id: "faq" }].map(({ label, id }) => (
               <button key={id} onClick={() => scrollTo(id)} className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">{label}</button>
             ))}
-            <button
-              onClick={() => scrollTo("waitlist")}
+            <a
+              href="https://app.snaxology.ai/"
               className="text-sm font-semibold text-white px-4 py-2 rounded-full"
               style={{
                 background: TEAL,
                 transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
+                display: "inline-block",
               }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
-                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1.08)";
+                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.04) translateY(-1px)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
+                (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1.08)";
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1) translateY(0)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
-                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1)";
+                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1) translateY(0)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
+                (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1)";
               }}
-              onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
-              onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
+              onMouseDown={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97)"; }}
+              onMouseUp={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.04) translateY(-1px)"; }}
             >
               Get Access
-            </button>
+            </a>
           </div>
           <button className="md:hidden p-2 text-gray-600" onClick={() => setNavOpen(!navOpen)}>
             <div className="w-5 h-0.5 bg-current mb-1" /><div className="w-5 h-0.5 bg-current mb-1" /><div className="w-5 h-0.5 bg-current" />
@@ -145,26 +146,27 @@ export default function Home() {
                 {id === "how" ? "How it works" : id.charAt(0).toUpperCase() + id.slice(1)}
               </button>
             ))}
-            <button
-              onClick={() => scrollTo("waitlist")}
+            <a
+              href="https://app.snaxology.ai/"
               className="text-sm font-semibold text-white px-4 py-2 rounded-full w-fit"
               style={{
                 background: TEAL,
                 transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
+                display: "inline-block",
               }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
-                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1.08)";
+                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.04) translateY(-1px)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
+                (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1.08)";
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1) translateY(0)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
-                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1)";
+                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1) translateY(0)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
+                (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1)";
               }}
-              onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
-              onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
-            >Get Access</button>
+              onMouseDown={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97)"; }}
+              onMouseUp={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.04) translateY(-1px)"; }}
+            >Get Access</a>
           </div>
         )}
       </nav>
@@ -193,7 +195,7 @@ export default function Home() {
         <div className="relative z-10 max-w-4xl mx-auto px-5 pt-20 pb-28 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-sm font-medium mb-8" style={{ background: "rgba(227,30,36,0.25)", color: "#ff8a8e" }}>
             <span className="w-2 h-2 rounded-full inline-block" style={{ background: "#ff8a8e" }} />
-            Early access now open
+            Now live — get access today
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
             Run your vending business
@@ -209,9 +211,9 @@ export default function Home() {
             Track your inventory, manage your clients, and know exactly when each machine was last stocked — all in one platform built for vending operators.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
-            <button onClick={() => scrollTo("waitlist")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
-              Get early access →
-            </button>
+            <a href="https://app.snaxology.ai/" className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
+              Get Access →
+            </a>
             <button onClick={() => scrollTo("how")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm border border-white/40 bg-white/10 hover:bg-white/20 transition-all active:scale-95">
               See how it works ↓
             </button>
@@ -371,75 +373,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WAITLIST ─────────────────────────────────────────────────────── */}
-      <section id="waitlist" className="py-20" style={{ background: TEAL_DEEP }}>
+      {/* ── GET ACCESS ───────────────────────────────────────────────────── */}
+      <section id="waitlist" className="py-24" style={{ background: TEAL_DEEP }}>
         <div className="max-w-lg mx-auto px-5 text-center">
-          <h2 className="text-4xl font-extrabold text-white mb-3">Get access</h2>
-          <p className="text-red-200/70 mb-10 text-sm leading-relaxed">
-            Early access is limited. Get in now and be first to know when we launch — plus a special founding member rate for operators who join early.
+          <h2 className="text-4xl font-extrabold text-white mb-4">Ready to run your route smarter?</h2>
+          <p className="text-red-200/70 mb-10 text-base leading-relaxed">
+            Snaxology is live. Create your account and start managing your machines, clients, and inventory — all in one place.
           </p>
-          {submitted ? (
-            <div className="rounded-2xl p-10 text-center" style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)" }}>
-              <div className="w-16 h-16 rounded-full flex items-center justify-center text-3xl mx-auto mb-5" style={{ background: "rgba(34,197,94,0.2)", border: "2px solid rgba(34,197,94,0.5)" }}>✓</div>
-              <h3 className="text-white font-bold text-2xl mb-2">You're on the list!</h3>
-              <p className="text-green-300 font-semibold text-sm mb-3">We got you. 🎉</p>
-              <p className="text-red-200/70 text-sm max-w-xs mx-auto">We'll reach out as soon as early access opens. Keep running your route — Snaxology is almost ready.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="rounded-2xl p-8 text-left space-y-5" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}>
-              <div>
-                <label className="block text-sm font-semibold text-white mb-2">Email <span className="text-red-300">*</span></label>
-                <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" className="w-full rounded-xl px-4 py-3 text-sm bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-red-300 transition-colors" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white mb-3">I'm most interested in:</p>
-                <div className="grid grid-cols-2 gap-2">
-                  {["Inventory tracking", "Client management", "Location analytics", "Growing my route"].map((opt) => (
-                    <label key={opt} className="flex items-center gap-2.5 cursor-pointer group">
-                      <div onClick={() => toggleInterest(opt)} className="w-5 h-5 rounded flex items-center justify-center flex-shrink-0 transition-colors cursor-pointer" style={{ background: interests.includes(opt) ? TEAL : "rgba(255,255,255,0.1)", border: interests.includes(opt) ? `2px solid ${TEAL}` : "2px solid rgba(255,255,255,0.25)" }}>
-                        {interests.includes(opt) && <span className="text-white text-xs font-bold">✓</span>}
-                      </div>
-                      <span className="text-sm text-white/80 group-hover:text-white transition-colors" onClick={() => toggleInterest(opt)}>{opt}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-              <button
-                type="submit"
-                className="w-full py-3.5 rounded-xl font-semibold text-white text-sm relative overflow-hidden group"
-                style={{
-                  background: TEAL,
-                  transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
-                }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.02) translateY(-1px)";
-                  (e.currentTarget as HTMLButtonElement).style.boxShadow = `0 8px 24px rgba(227,30,36,0.45)`;
-                  (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1.08)";
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLButtonElement).style.transform = "scale(1) translateY(0)";
-                  (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
-                  (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1)";
-                }}
-                onMouseDown={e => {
-                  (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97) translateY(0)";
-                  (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
-                }}
-                onMouseUp={e => {
-                  (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.02) translateY(-1px)";
-                  (e.currentTarget as HTMLButtonElement).style.boxShadow = `0 8px 24px rgba(227,30,36,0.45)`;
-                }}
-              >
-                <span className="flex items-center justify-center gap-2">
-                  Get access
-                  <span
-                    className="inline-block transition-transform duration-200 group-hover:translate-x-1"
-                    style={{ fontSize: "1rem" }}
-                  >→</span>
-                </span>
-              </button>
-            </form>
-          )}
+          <a
+            href="https://app.snaxology.ai/"
+            className="inline-flex items-center justify-center gap-2 w-full max-w-sm py-4 rounded-xl font-semibold text-white text-base group"
+            style={{
+              background: TEAL,
+              transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.02) translateY(-1px)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = `0 8px 24px rgba(227,30,36,0.45)`;
+              (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1.08)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1) translateY(0)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
+              (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1)";
+            }}
+            onMouseDown={e => {
+              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97) translateY(0)";
+            }}
+            onMouseUp={e => {
+              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.02) translateY(-1px)";
+            }}
+          >
+            Get Access
+            <span className="inline-block transition-transform duration-200 group-hover:translate-x-1" style={{ fontSize: "1rem" }}>→</span>
+          </a>
         </div>
       </section>
 
