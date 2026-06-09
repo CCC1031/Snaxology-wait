@@ -219,7 +219,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex flex-wrap justify-center gap-5 text-sm text-white/70">
-            {[{ icon: "🏪", label: "Micro markets & vending" }, { icon: "📦", label: "Inventory tracking" }, { icon: "👥", label: "Built-in CRM" }].map(({ icon, label }) => (
+            {[{ icon: "🏪", label: "Micro markets & vending" }, { icon: "📦", label: "Inventory tracking" }, { icon: "👥", label: "Built-in CRM" }, { icon: "📍", label: "Scout AI lead gen" }].map(({ icon, label }) => (
               <div key={label} className="flex items-center gap-1.5"><span>{icon}</span><span className="font-medium">{label}</span></div>
             ))}
           </div>
