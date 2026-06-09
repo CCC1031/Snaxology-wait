@@ -64,8 +64,8 @@ export default function Home() {
       a: "Yes — Snaxology was built by an operator, for operators. Every feature is designed around how vending businesses actually run: managing multiple machines, tracking restock dates, keeping client relationships organized, and making decisions based on real data. It's not a generic CRM with vending bolted on.",
     },
     {
-      q: "Can I manage both micro markets and traditional vending machines?",
-      a: "Absolutely. Snaxology supports smart micro markets and AI vending coolers alongside traditional machines. Whether you're running a single cooler or a full mixed-format route, the platform keeps everything organized in one place.",
+      q: "What kind of support do I get?",
+      a: "You get direct access to the Snaxology team. We're a small, operator-focused company — so when you reach out, you hear back from a real person.",
     },
     {
       q: "How does inventory tracking work?",
