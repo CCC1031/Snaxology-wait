@@ -401,7 +401,7 @@ export default function Home() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ boxShadow: `0 24px 64px rgba(227,30,36,0.12), 0 4px 16px rgba(0,0,0,0.10)` }}>
                 <img
-                  src="/manus-storage/scout-screenshot_7c705c49.png"
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663676595920/mSJmXyETeARbjqhC.png"
                   alt="Scout map-based lead search in Snaxology"
                   className="w-full h-auto block"
                   loading="lazy"
