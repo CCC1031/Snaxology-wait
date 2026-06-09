@@ -360,6 +360,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SCOUT ───────────────────────────────────────────────────────── */}
+      <section id="scout" className="py-20" style={{ background: "oklch(0.978 0.006 80)" }}>
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text column */}
+            <div>
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>Scout</span>
+              <h2 className="text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Find your next location before your competition does
+              </h2>
+              <p className="text-gray-500 text-base leading-relaxed mb-6">
+                Scout is your AI-powered lead engine. Search any city, filter by business type, and set your radius — Scout surfaces the best placement opportunities on an interactive map so you can pitch new accounts with confidence.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  { icon: "📍", text: "Map-based search by address, business name, or city/state" },
+                  { icon: "🏢", text: "Filter by business type — restaurants, offices, gyms, and more" },
+                  { icon: "🤖", text: "AI Lead Gen tab surfaces high-potential accounts automatically" },
+                  { icon: "📏", text: "Adjustable radius from 1 to 50 miles" },
+                ].map(({ icon, text }) => (
+                  <li key={text} className="flex items-start gap-3 text-sm text-gray-600">
+                    <span className="text-base mt-0.5">{icon}</span>
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://app.snaxology.ai/"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm"
+                style={{ background: TEAL, transition: "filter 160ms ease-out" }}
+                onMouseEnter={e => (e.currentTarget.style.filter = "brightness(1.12)")}
+                onMouseLeave={e => (e.currentTarget.style.filter = "brightness(1)")}
+              >
+                Try Scout
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </a>
+            </div>
+            {/* Screenshot column */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ boxShadow: `0 24px 64px rgba(227,30,36,0.12), 0 4px 16px rgba(0,0,0,0.10)` }}>
+                <img
+                  src="/manus-storage/scout-screenshot_7c705c49.png"
+                  alt="Scout map-based lead search in Snaxology"
+                  className="w-full h-auto block"
+                  loading="lazy"
+                />
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl px-4 py-2 shadow-lg border border-gray-100 flex items-center gap-2">
+                <span className="text-lg">🗺️</span>
+                <div>
+                  <div className="text-xs font-bold text-gray-900">AI Lead Gen</div>
+                  <div className="text-xs text-gray-400">Built right in</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
       <section id="faq" className="py-20 bg-background">
         <div className="max-w-2xl mx-auto px-5">
