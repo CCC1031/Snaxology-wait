@@ -182,7 +182,7 @@ export default function Home() {
       >
         {/* Background video */}
         <video
-          src="https://res.cloudinary.com/dy4bqxt8p/video/upload/v1779622271/02_u2efg7.mp4"
+          src="https://res.cloudinary.com/do9un1nb1/video/upload/v1781566412/snaxology_hero_video.mp4"
           autoPlay
           muted
           loop
