@@ -8,7 +8,7 @@ export default function ClippedVideoTab() {
       }}
     >
       <video
-        src="https://res.cloudinary.com/dy4bqxt8p/video/upload/v1779622271/02_u2efg7.mp4"
+        src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663676595920/PutOcUPTxWIuyWNt.mov"
         autoPlay
         muted
         loop
