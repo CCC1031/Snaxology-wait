@@ -8,7 +8,7 @@ export default function ClippedVideoTab() {
       }}
     >
       <video
-        src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663676595920/vbNbIQFykmvRwvIb.mp4"
+        src="https://res.cloudinary.com/do9un1nb1/video/upload/v1781566412/snaxology_hero_video.mp4"
         autoPlay
         muted
         loop
