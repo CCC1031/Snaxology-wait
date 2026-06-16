@@ -9,9 +9,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-500">
-                <span className="text-lg font-bold text-white font-display">S</span>
-              </div>
+              <img
+                src="https://res.cloudinary.com/do9un1nb1/image/upload/v1781570351/provendy_logo.png"
+                alt="Provendy logo"
+                className="h-10 w-10 object-contain"
+              />
               <span className="text-lg font-display font-bold text-gray-900">Provendy</span>
             </div>
             <p className="text-sm text-gray-600 font-body">
