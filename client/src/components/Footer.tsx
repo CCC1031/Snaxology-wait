@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-500">
-                <span className="text-lg font-bold text-white font-display">P</span>
+                <span className="text-xl font-black text-white">P</span>
               </div>
               <span className="text-lg font-display font-bold text-gray-900">Provendy</span>
             </div>
