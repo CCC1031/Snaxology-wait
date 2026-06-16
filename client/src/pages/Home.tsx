@@ -546,7 +546,7 @@ export default function Home() {
         <div className="max-w-lg mx-auto px-5 text-center">
           <h2 className="text-4xl font-extrabold text-white mb-4">Ready to run your route smarter?</h2>
           <p className="text-red-200/70 mb-10 text-base leading-relaxed">
-            Just <span className="text-white font-bold">$49/month</span> — cancel anytime. Lock in your rate before the price goes up.
+            Start with a 14-day free trial. No commitment, cancel anytime.
           </p>
           <a
             href="https://app.provendy.ai/"
