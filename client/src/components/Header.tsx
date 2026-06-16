@@ -6,11 +6,9 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img
-            src="https://res.cloudinary.com/do9un1nb1/image/upload/v1781570351/provendy_logo.png"
-            alt="Provendy logo"
-            className="h-10 w-10 object-contain"
-          />
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-500">
+            <span className="text-lg font-bold text-white font-display">P</span>
+          </div>
           <div>
             <h1 className="text-xl font-display font-bold text-gray-900">Provendy</h1>
             <p className="text-xs text-gray-500 font-body">Business Process Map</p>
