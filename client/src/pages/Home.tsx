@@ -420,6 +420,114 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── PRICING ──────────────────────────────────────────────────────── */}
+      <section id="pricing" className="py-24" style={{ background: "oklch(0.97 0.006 80)" }}>
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="text-center mb-14">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>Pricing</span>
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Simple, transparent pricing</h2>
+            <p className="text-gray-500 text-base max-w-md mx-auto">Start free for 14 days — no credit card required. Upgrade anytime.</p>
+          </div>
+
+          {/* Free trial banner */}
+          <div className="flex items-center justify-center gap-3 mb-10 py-3 px-6 rounded-xl max-w-xl mx-auto" style={{ background: TEAL_LIGHT }}>
+            <span className="text-2xl">🎁</span>
+            <p className="text-sm font-semibold" style={{ color: TEAL }}>14-day free trial — full Pro access, no credit card required</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+
+            {/* STARTER */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 flex flex-col shadow-sm">
+              <div className="mb-6">
+                <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Starter</span>
+                <div className="mt-2 flex items-end gap-1">
+                  <span className="text-4xl font-extrabold text-gray-900">$9.99</span>
+                  <span className="text-gray-400 text-sm mb-1">/month</span>
+                </div>
+                <p className="text-gray-500 text-sm mt-2">Perfect for solo operators and teams just getting started.</p>
+              </div>
+              <ul className="space-y-3 flex-1 mb-8">
+                {[
+                  "Basic inventory tracking across your machines",
+                  "Support for 1–2 locations",
+                  "Mobile app access (Provendy)",
+                  "Essential reports and dashboards",
+                  "Email support",
+                  "Data export (CSV format)",
+                ].map(f => (
+                  <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-0.5 text-green-500 flex-shrink-0">✓</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <a href="https://app.provendy.ai/" className="block text-center py-3 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-gray-50" style={{ borderColor: "#e5e7eb", color: "#374151" }}>Start Free Trial</a>
+            </div>
+
+            {/* PRO — highlighted */}
+            <div className="relative rounded-2xl p-8 flex flex-col shadow-xl" style={{ background: TEAL, border: `2px solid ${TEAL_DARK}` }}>
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span className="bg-yellow-400 text-yellow-900 text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow">Most Popular</span>
+              </div>
+              <div className="mb-6">
+                <span className="text-xs font-bold uppercase tracking-widest text-red-100">Pro</span>
+                <div className="mt-2 flex items-end gap-1">
+                  <span className="text-4xl font-extrabold text-white">$19.99</span>
+                  <span className="text-red-200 text-sm mb-1">/month</span>
+                </div>
+                <p className="text-red-100 text-sm mt-2">For serious operators scaling their business.</p>
+              </div>
+              <ul className="space-y-3 flex-1 mb-8">
+                {[
+                  "Everything in Starter",
+                  "AI Voice Agent (Bland AI) — handles calls & schedules refills",
+                  "Unlimited locations",
+                  "Advanced analytics & demand forecasting",
+                  "Full CRM Suite: notes, workflow, vendor comms",
+                  "Route optimization & driver dispatch",
+                  "Multi-user access & team collaboration",
+                  "Priority email support",
+                  "Advanced reporting & custom metrics",
+                ].map(f => (
+                  <li key={f} className="flex items-start gap-2 text-sm text-white">
+                    <span className="mt-0.5 text-yellow-300 flex-shrink-0">✓</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <a href="https://app.provendy.ai/" className="block text-center py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90 shadow-lg" style={{ background: "white", color: TEAL }}>Start Free Trial — 14 Days Free</a>
+            </div>
+
+            {/* ENTERPRISE */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 flex flex-col shadow-sm">
+              <div className="mb-6">
+                <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Enterprise</span>
+                <div className="mt-2 flex items-end gap-1">
+                  <span className="text-4xl font-extrabold text-gray-900">Custom</span>
+                </div>
+                <p className="text-gray-500 text-sm mt-2">For large operators running 100+ machines across multiple properties.</p>
+              </div>
+              <ul className="space-y-3 flex-1 mb-8">
+                {[
+                  "Everything in Pro",
+                  "Dedicated account manager",
+                  "Faster dedicated support",
+                  "White-label / private label options",
+                  "Custom integrations (case-by-case)",
+                  "Early access to new features",
+                  "Feature roadmap prioritization",
+                ].map(f => (
+                  <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-0.5 text-green-500 flex-shrink-0">✓</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <a href="mailto:hello@provendy.ai" className="block text-center py-3 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-gray-50" style={{ borderColor: "#e5e7eb", color: "#374151" }}>Contact Sales</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
       <section id="faq" className="py-20 bg-background">
         <div className="max-w-2xl mx-auto px-5">
