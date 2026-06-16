@@ -426,13 +426,13 @@ export default function Home() {
           <div className="text-center mb-14">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>Pricing</span>
             <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Simple, transparent pricing</h2>
-            <p className="text-gray-500 text-base max-w-md mx-auto">Start free for 14 days — no credit card required. Upgrade anytime.</p>
+            <p className="text-gray-500 text-base max-w-md mx-auto">Start free for 14 days. Upgrade anytime.</p>
           </div>
 
           {/* Free trial banner */}
           <div className="flex items-center justify-center gap-3 mb-10 py-3 px-6 rounded-xl max-w-xl mx-auto" style={{ background: TEAL_LIGHT }}>
             <span className="text-2xl">🎁</span>
-            <p className="text-sm font-semibold" style={{ color: TEAL }}>14-day free trial — full Pro access, no credit card required</p>
+            <p className="text-sm font-semibold" style={{ color: TEAL }}>14-day free trial — full Pro access</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
