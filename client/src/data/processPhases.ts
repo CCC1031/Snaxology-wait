@@ -19,7 +19,7 @@ export const processPhases: ProcessPhase[] = [
   {
     id: 1,
     title: "Initial Contact",
-    description: "Reach out to property managers and decision makers to introduce Snaxology solutions.",
+    description: "Reach out to property managers and decision makers to introduce Provendy solutions.",
     icon: "Phone",
     color: "#E31E24",
     duration: "1-2 weeks",
@@ -64,7 +64,7 @@ export const processPhases: ProcessPhase[] = [
   {
     id: 4,
     title: "Contract Signed",
-    description: "Property manager signs the contract, officially partnering with Snaxology.",
+    description: "Property manager signs the contract, officially partnering with Provendy.",
     icon: "CheckCircle",
     color: "#0EA5A0",
     duration: "1 day",
@@ -79,7 +79,7 @@ export const processPhases: ProcessPhase[] = [
   {
     id: 5,
     title: "Marketing Materials",
-    description: "Develop branded marketing content to promote the Snaxology experience to residents.",
+    description: "Develop branded marketing content to promote the Provendy experience to residents.",
     icon: "Palette",
     color: "#E31E24",
     duration: "2-3 weeks",

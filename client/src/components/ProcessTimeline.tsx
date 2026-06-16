@@ -9,7 +9,7 @@ export default function ProcessTimeline() {
         {/* Header */}
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-display font-bold text-gray-900 md:text-5xl">
-            Snaxology Business Journey
+            Provendy Business Journey
           </h1>
           <p className="text-lg text-gray-600 font-body">
             From initial contact to 24/7 AI-powered operations
@@ -35,7 +35,7 @@ export default function ProcessTimeline() {
             Ready to Transform Your Property?
           </h2>
           <p className="mb-6 text-gray-700 font-body">
-            Schedule a free site assessment and discover how Snaxology can elevate your space.
+            Schedule a free site assessment and discover how Provendy can elevate your space.
           </p>
           <button className="inline-block rounded-lg bg-red-500 px-8 py-3 font-accent font-semibold text-white transition-all duration-300 hover:bg-red-600 hover:shadow-lg">
             Schedule Assessment

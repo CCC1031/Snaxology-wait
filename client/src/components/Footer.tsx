@@ -12,7 +12,7 @@ export default function Footer() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-500">
                 <span className="text-lg font-bold text-white font-display">S</span>
               </div>
-              <span className="text-lg font-display font-bold text-gray-900">Snaxology</span>
+              <span className="text-lg font-display font-bold text-gray-900">Provendy</span>
             </div>
             <p className="text-sm text-gray-600 font-body">
               Luxury meets convenience through AI-powered smart markets.
@@ -59,7 +59,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-gray-200 pt-8 text-center">
           <p className="text-sm text-gray-600 font-body">
-            © 2026 Snaxology. All rights reserved. | Elevating luxury spaces with AI-powered convenience.
+            © 2026 Provendy. All rights reserved. | Elevating luxury spaces with AI-powered convenience.
           </p>
         </div>
       </div>

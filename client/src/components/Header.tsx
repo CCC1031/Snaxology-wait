@@ -10,7 +10,7 @@ export default function Header() {
             <span className="text-lg font-bold text-white font-display">S</span>
           </div>
           <div>
-            <h1 className="text-xl font-display font-bold text-gray-900">Snaxology</h1>
+            <h1 className="text-xl font-display font-bold text-gray-900">Provendy</h1>
             <p className="text-xs text-gray-500 font-body">Business Process Map</p>
           </div>
         </div>

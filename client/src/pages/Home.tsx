@@ -1,7 +1,7 @@
 /**
- * Snaxology Landing Page
- * Design: HappyPath-inspired — clean white + Snaxology red/black, Plus Jakarta Sans, route-line hero bg
- * Copy: Snaxology-specific — CRM + inventory management platform for vending operators
+ * Provendy Landing Page
+ * Design: HappyPath-inspired — clean white + Provendy red/black, Plus Jakarta Sans, route-line hero bg
+ * Copy: Provendy-specific — CRM + inventory management platform for vending operators
  */
 import { useState } from "react";
 import ClippedVideoTab from "@/components/ui/clipped-video-tab";
@@ -60,12 +60,12 @@ export default function Home() {
 
   const faqs = [
     {
-      q: "Is Snaxology built specifically for vending operators?",
-      a: "Yes — Snaxology was built by an operator, for operators. Every feature is designed around how vending businesses actually run: managing multiple machines, tracking restock dates, keeping client relationships organized, and making decisions based on real data. It's not a generic CRM with vending bolted on.",
+      q: "Is Provendy built specifically for vending operators?",
+      a: "Yes — Provendy was built by an operator, for operators. Every feature is designed around how vending businesses actually run: managing multiple machines, tracking restock dates, keeping client relationships organized, and making decisions based on real data. It's not a generic CRM with vending bolted on.",
     },
     {
       q: "What kind of support do I get?",
-      a: "You get direct access to the Snaxology team. We're a small, operator-focused company — so when you reach out, you hear back from a real person.",
+      a: "You get direct access to the Provendy team. We're a small, operator-focused company — so when you reach out, you hear back from a real person.",
     },
     {
       q: "How does inventory tracking work?",
@@ -81,7 +81,7 @@ export default function Home() {
     },
     {
       q: "Is there a mobile experience?",
-      a: "Yes. Snaxology is designed to work on your phone in the field and your laptop back at the office. Native iOS and Android apps are on the roadmap — for now, the mobile web experience is fast and field-ready.",
+      a: "Yes. Provendy is designed to work on your phone in the field and your laptop back at the office. Native iOS and Android apps are on the roadmap — for now, the mobile web experience is fast and field-ready.",
     },
     {
       q: "Can I import my existing machine list or client data?",
@@ -105,14 +105,14 @@ export default function Home() {
         <div className="w-full px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => scrollTo("hero")}>
               <div className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-black text-base" style={{ background: TEAL }}>S</div>
-            <span className="font-bold text-lg text-gray-900">Snaxology</span>
+            <span className="font-bold text-lg text-gray-900">Provendy</span>
           </div>
           <div className="hidden md:flex items-center gap-7">
             {[{ label: "How it works", id: "how" }, { label: "Features", id: "features" }, { label: "FAQ", id: "faq" }].map(({ label, id }) => (
               <button key={id} onClick={() => scrollTo(id)} className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">{label}</button>
             ))}
             <a
-              href="https://app.snaxology.ai/"
+              href="https://app.provendy.ai/"
               className="text-sm font-semibold text-white px-4 py-2 rounded-full"
               style={{
                 background: TEAL,
@@ -147,7 +147,7 @@ export default function Home() {
               </button>
             ))}
             <a
-              href="https://app.snaxology.ai/"
+              href="https://app.provendy.ai/"
               className="text-sm font-semibold text-white px-4 py-2 rounded-full w-fit"
               style={{
                 background: TEAL,
@@ -211,7 +211,7 @@ export default function Home() {
             Track your inventory, manage your clients, and know exactly when each machine was last stocked — all in one platform built for vending operators.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
-            <a href="https://app.snaxology.ai/" className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
+            <a href="https://app.provendy.ai/" className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
               Get Access →
             </a>
             <button onClick={() => scrollTo("how")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm border border-white/40 bg-white/10 hover:bg-white/20 transition-all active:scale-95">
@@ -232,7 +232,7 @@ export default function Home() {
           <div className="text-center mb-14">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: "#fef2f2", color: "#dc2626" }}>The Problem</span>
             <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Still running on spreadsheets?</h2>
-            <p className="text-gray-500 max-w-md mx-auto">Most operators run their business out of spreadsheets, sticky notes, and memory. Snaxology replaces all of that.</p>
+            <p className="text-gray-500 max-w-md mx-auto">Most operators run their business out of spreadsheets, sticky notes, and memory. Provendy replaces all of that.</p>
           </div>
           <div className="space-y-4">
             {[
@@ -256,7 +256,7 @@ export default function Home() {
                     <span style={{ color: "#16a34a" }} className="text-sm font-bold">✓</span>
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wide mb-0.5" style={{ color: "#16a34a" }}>Snaxology</p>
+                    <p className="text-xs font-bold uppercase tracking-wide mb-0.5" style={{ color: "#16a34a" }}>Provendy</p>
                     <p className="text-sm text-gray-700 font-medium">{solution}</p>
                   </div>
                 </div>
@@ -295,12 +295,12 @@ export default function Home() {
           <div className="text-center mb-14">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>How it works</span>
             <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Built for the route, not the office</h2>
-            <p className="text-gray-500">No training needed. If you can use a spreadsheet, you can use Snaxology — and it's a lot faster.</p>
+            <p className="text-gray-500">No training needed. If you can use a spreadsheet, you can use Provendy — and it's a lot faster.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { num: "1", icon: "🏪", title: "Add your machines", desc: "Set up each location with its machine type, client contact, and starting inventory. Takes minutes per location and you only do it once." },
-              { num: "2", icon: "📦", title: "Log restocks and visits", desc: "Every time you service a machine, log what you stocked and when. Snaxology tracks the history so you always know where things stand." },
+              { num: "2", icon: "📦", title: "Log restocks and visits", desc: "Every time you service a machine, log what you stocked and when. Provendy tracks the history so you always know where things stand." },
               { num: "3", icon: "📊", title: "Manage clients and grow", desc: "Use the built-in CRM to stay on top of client relationships. Upcoming: location analytics to help you evaluate placements and find new ones." },
             ].map(({ num, icon, title, desc }) => (
               <div key={num} className="rounded-2xl p-7 border border-gray-200" style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.04)", background: "oklch(0.99 0.003 80)" }}>
@@ -350,7 +350,7 @@ export default function Home() {
             <p className="text-red-200/70 text-sm">Works on your phone in the field and your laptop back at the office</p>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img src={APP_MOCKUP} alt="Snaxology platform showing machine and client management" className="w-full object-cover" />
+            <img src={APP_MOCKUP} alt="Provendy platform showing machine and client management" className="w-full object-cover" />
           </div>
           <div className="flex flex-wrap justify-center gap-2 mt-8">
             {["Micro markets", "AI coolers", "Traditional vending", "Any location type"].map((tag) => (
@@ -387,7 +387,7 @@ export default function Home() {
                 ))}
               </ul>
               <a
-                href="https://app.snaxology.ai/"
+                href="https://app.provendy.ai/"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm"
                 style={{ background: TEAL, transition: "filter 160ms ease-out" }}
                 onMouseEnter={e => (e.currentTarget.style.filter = "brightness(1.12)")}
@@ -402,7 +402,7 @@ export default function Home() {
               <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ boxShadow: `0 24px 64px rgba(227,30,36,0.12), 0 4px 16px rgba(0,0,0,0.10)` }}>
                 <img
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663676595920/mSJmXyETeARbjqhC.png"
-                  alt="Scout map-based lead search in Snaxology"
+                  alt="Scout map-based lead search in Provendy"
                   className="w-full h-auto block"
                   loading="lazy"
                 />
@@ -441,7 +441,7 @@ export default function Home() {
             Just <span className="text-white font-bold">$49/month</span> — cancel anytime. Lock in your rate before the price goes up.
           </p>
           <a
-            href="https://app.snaxology.ai/"
+            href="https://app.provendy.ai/"
             className="inline-flex items-center justify-center gap-2 w-full max-w-sm py-4 rounded-xl font-semibold text-white text-base group"
             style={{
               background: TEAL,
@@ -476,8 +476,8 @@ export default function Home() {
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-black text-sm" style={{ background: TEAL }}>S</div>
             <div>
-              <p className="font-bold text-sm text-gray-900">Snaxology</p>
-              <p className="text-xs text-gray-400">© 2026 Snaxology. All rights reserved.</p>
+              <p className="font-bold text-sm text-gray-900">Provendy</p>
+              <p className="text-xs text-gray-400">© 2026 Provendy. All rights reserved.</p>
             </div>
           </div>
           <p className="text-xs text-gray-400 text-center">Built by an operator who was tired of running a vending business on spreadsheets.</p>
