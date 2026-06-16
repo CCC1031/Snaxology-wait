@@ -465,7 +465,7 @@ export default function Home() {
             </div>
 
             {/* PRO — highlighted */}
-            <div className="relative rounded-2xl p-8 flex flex-col shadow-xl" style={{ background: TEAL, border: `2px solid ${TEAL_DARK}` }}>
+            <div className="relative rounded-2xl p-8 flex flex-col shadow-xl" style={{ background: "#8B0000", border: "2px solid #6b0000" }}>
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <span className="bg-yellow-400 text-yellow-900 text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow">Most Popular</span>
               </div>
