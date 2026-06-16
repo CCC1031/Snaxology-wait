@@ -104,7 +104,7 @@ export default function Home() {
       <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-gray-100" style={{ background: 'oklch(0.978 0.006 80 / 0.92)', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
         <div className="w-full px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => scrollTo("hero")}>
-              <div className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-black text-base" style={{ background: TEAL }}>S</div>
+              <img src="https://res.cloudinary.com/do9un1nb1/image/upload/v1781570351/provendy_logo.png" alt="Provendy logo" className="w-9 h-9 object-contain" />
             <span className="font-bold text-lg text-gray-900">Provendy</span>
           </div>
           <div className="hidden md:flex items-center gap-7">
