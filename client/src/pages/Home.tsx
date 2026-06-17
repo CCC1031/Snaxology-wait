@@ -730,7 +730,7 @@ export default function Home() {
 
       {/* ── FOOTER ──────────────────────────────────────────────────────── */}
       <footer className="py-10 bg-white border-t border-gray-100">
-        <div className="max-w-5xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-5xl mx-auto px-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 w-full">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-black text-sm" style={{ background: TEAL }}>S</div>
             <div>
