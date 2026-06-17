@@ -662,7 +662,7 @@ export default function Home() {
           <div className="flex gap-5 text-sm text-gray-500">
             <a href="#" className="hover:text-gray-800 transition-colors">Privacy</a>
             <a href="#" className="hover:text-gray-800 transition-colors">Terms</a>
-            <a href="mailto:hello@provendy.ai" className="hover:text-gray-800 transition-colors">Contact</a>
+            <a href="mailto:ccolin@snaxologyvending.com" className="hover:text-gray-800 transition-colors">Contact</a>
           </div>
         </div>
       </footer>
