@@ -385,7 +385,7 @@ export default function Home() {
                 ))}
               </ul>
               <a
-                href="https://app.provendy.ai/"
+                href="https://app.provendy.ai/checkout/pro"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm"
                 style={{ background: TEAL, transition: "filter 160ms ease-out" }}
                 onMouseEnter={e => (e.currentTarget.style.filter = "brightness(1.12)")}
