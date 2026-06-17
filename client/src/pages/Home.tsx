@@ -738,6 +738,7 @@ export default function Home() {
               <p className="text-xs text-gray-400">© 2026 Provendy. All rights reserved.</p>
             </div>
           </div>
+          <p className="text-xs text-gray-400 text-center">Built by an operator who was tired of running a vending business on spreadsheets.</p>
           <div className="flex gap-5 text-sm text-gray-500">
             <a href="#" className="hover:text-gray-800 transition-colors">Privacy</a>
             <a href="#" className="hover:text-gray-800 transition-colors">Terms</a>
