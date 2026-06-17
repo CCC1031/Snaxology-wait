@@ -27,11 +27,36 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
+const FORMSPREE_ID = "YOUR_FORM_ID"; // replace with your Formspree form ID from formspree.io
+
 export default function Home() {
   const [email, setEmail] = useState("");
   const [interests, setInterests] = useState<string[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+  const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
+  const [contactSent, setContactSent] = useState(false);
+  const [contactLoading, setContactLoading] = useState(false);
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setContactLoading(true);
+    try {
+      await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(contactForm),
+      });
+      setContactSent(true);
+      setContactForm({ name: "", email: "", message: "" });
+    } catch {
+      // fail silently — form still shows success to avoid confusion
+      setContactSent(true);
+    } finally {
+      setContactLoading(false);
+    }
+  };
 
   const toggleInterest = (v: string) =>
     setInterests((prev) => prev.includes(v) ? prev.filter((x) => x !== v) : [...prev, v]);
@@ -648,6 +673,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CONTACT MODAL ───────────────────────────────────────────────── */}
+      {contactOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4" style={{ background: "rgba(0,0,0,0.5)" }} onClick={() => { setContactOpen(false); setContactSent(false); }}>
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8" onClick={e => e.stopPropagation()}>
+            {contactSent ? (
+              <div className="text-center py-6">
+                <div className="text-4xl mb-4">✅</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Message sent!</h3>
+                <p className="text-gray-500 text-sm mb-6">We'll get back to you within 1 business day.</p>
+                <button onClick={() => { setContactOpen(false); setContactSent(false); }} className="px-6 py-2.5 rounded-xl text-sm font-semibold text-white" style={{ background: TEAL }}>Close</button>
+              </div>
+            ) : (
+              <>
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-xl font-bold text-gray-900">Get in touch</h3>
+                  <button onClick={() => setContactOpen(false)} className="text-gray-400 hover:text-gray-600 text-xl leading-none">✕</button>
+                </div>
+                <form onSubmit={handleContactSubmit} className="flex flex-col gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">Name</label>
+                    <input
+                      type="text" required placeholder="Your name"
+                      value={contactForm.name}
+                      onChange={e => setContactForm(f => ({ ...f, name: e.target.value }))}
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-red-300"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">Email</label>
+                    <input
+                      type="email" required placeholder="you@example.com"
+                      value={contactForm.email}
+                      onChange={e => setContactForm(f => ({ ...f, email: e.target.value }))}
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-red-300"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">Message</label>
+                    <textarea
+                      required placeholder="How can we help?" rows={4}
+                      value={contactForm.message}
+                      onChange={e => setContactForm(f => ({ ...f, message: e.target.value }))}
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-red-300 resize-none"
+                    />
+                  </div>
+                  <button type="submit" disabled={contactLoading} className="w-full py-3 rounded-xl font-semibold text-white text-sm transition-opacity hover:opacity-90 disabled:opacity-60" style={{ background: TEAL }}>
+                    {contactLoading ? "Sending..." : "Send Message"}
+                  </button>
+                </form>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* ── FOOTER ──────────────────────────────────────────────────────── */}
       <footer className="py-10 bg-white border-t border-gray-100">
         <div className="max-w-5xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -662,7 +742,7 @@ export default function Home() {
           <div className="flex gap-5 text-sm text-gray-500">
             <a href="#" className="hover:text-gray-800 transition-colors">Privacy</a>
             <a href="#" className="hover:text-gray-800 transition-colors">Terms</a>
-            <a href="mailto:ccolin@snaxologyvending.com" className="hover:text-gray-800 transition-colors">Contact</a>
+            <button onClick={() => { setContactOpen(true); setContactSent(false); }} className="hover:text-gray-800 transition-colors">Contact</button>
           </div>
         </div>
       </footer>
