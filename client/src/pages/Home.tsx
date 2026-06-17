@@ -64,8 +64,16 @@ export default function Home() {
       a: "Yes — Provendy was built by an operator, for operators. Every feature is designed around how vending businesses actually run: managing multiple machines, tracking restock dates, keeping client relationships organized, and making decisions based on real data. It's not a generic CRM with vending bolted on.",
     },
     {
-      q: "What kind of support do I get?",
-      a: "You get direct access to the Provendy team. We're a small, operator-focused company — so when you reach out, you hear back from a real person.",
+      q: "What does it cost?",
+      a: "Provendy offers two plans: Starter at $9.99/month and Pro at $19.99/month. Both come with a 7-day free trial — no charge until your trial ends. Cancel anytime.",
+    },
+    {
+      q: "What's the difference between Starter and Pro?",
+      a: "Starter gives you CRM, inventory tracking, tasks, bookings, contracts, and SnaxScout. Pro adds the AI Voice Receptionist (outbound calls), unlimited locations, advanced analytics, and priority support.",
+    },
+    {
+      q: "Do I need a credit card to start?",
+      a: "Yes — a card is required to start your free trial, but you won't be charged until the 7 days are up. Cancel before then and you owe nothing.",
     },
     {
       q: "How does inventory tracking work?",
@@ -76,10 +84,6 @@ export default function Home() {
       a: "The CRM lets you manage your client relationships alongside your machines. Store contact info, log conversations, track follow-up dates, and see the full history of each account — all linked directly to the machines at that location.",
     },
     {
-      q: "What is location data and analytics, and when is it coming?",
-      a: "Location analytics will give operators data-driven insights on each placement — foot traffic estimates, demographic fit, revenue benchmarks for similar locations, and more. It's designed to help you evaluate whether a location is worth keeping and identify where to expand next. This feature is on the roadmap and coming soon.",
-    },
-    {
       q: "Is there a mobile experience?",
       a: "Yes. Provendy is designed to work on your phone in the field and your laptop back at the office. Native iOS and Android apps are on the roadmap — for now, the mobile web experience is fast and field-ready.",
     },
@@ -88,12 +92,12 @@ export default function Home() {
       a: "Yes. We support CSV imports so you can bring in your existing locations, clients, and inventory data from spreadsheets or other tools and hit the ground running.",
     },
     {
-      q: "Is my data secure?",
-      a: "All data is encrypted in transit and at rest. We use industry-standard security practices and your data is never sold or shared with third parties.",
+      q: "What kind of support do I get?",
+      a: "You get direct access to the Provendy team. We're a small, operator-focused company — so when you reach out, you hear back from a real person. Pro users get priority support.",
     },
     {
-      q: "What does it cost?",
-      a: "We're in early access right now. Join the waitlist and you'll be among the first to know about pricing — early access members get a special founding member rate.",
+      q: "Is my data secure?",
+      a: "All data is encrypted in transit and at rest. We use industry-standard security practices and your data is never sold or shared with third parties.",
     },
   ];
 
