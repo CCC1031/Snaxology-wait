@@ -461,7 +461,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <a href="https://app.provendy.ai/" className="block text-center py-3 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-gray-50" style={{ borderColor: "#e5e7eb", color: "#374151" }}>Start Free Trial</a>
+              <a href="https://app.provendy.ai/checkout/starter" className="block text-center py-3 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-gray-50" style={{ borderColor: "#e5e7eb", color: "#374151" }}>Start Free Trial</a>
             </div>
 
             {/* PRO — highlighted */}
@@ -494,7 +494,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <a href="https://app.provendy.ai/" className="block text-center py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90 shadow-lg" style={{ background: "white", color: TEAL }}>Start Free Trial — 7 Days Free</a>
+              <a href="https://app.provendy.ai/checkout/pro" className="block text-center py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90 shadow-lg" style={{ background: "white", color: TEAL }}>Start Free Trial — 7 Days Free</a>
             </div>
 
             {/* WEBSITE CREATION ADD-ON */}
