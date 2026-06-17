@@ -217,7 +217,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex flex-wrap justify-center gap-5 text-sm text-white/70">
-            {[{ icon: "🏪", label: "Micro markets & vending" }, { icon: "📦", label: "Inventory tracking" }, { icon: "👥", label: "Built-in CRM" }, { icon: "📍", label: "Scout AI lead gen" }].map(({ icon, label }) => (
+            {[{ icon: "📝", label: "Contracts" }, { icon: "📦", label: "Inventory tracking" }, { icon: "👥", label: "Built-in CRM" }, { icon: "📍", label: "Scout AI lead gen" }].map(({ icon, label }) => (
               <div key={label} className="flex items-center gap-1.5"><span>{icon}</span><span className="font-medium">{label}</span></div>
             ))}
           </div>
@@ -325,7 +325,7 @@ export default function Home() {
               { icon: "📦", title: "Inventory tracking", desc: "Know exactly what's in each machine and when it was last restocked. No more guessing or surprise empty slots." },
               { icon: "🗓", title: "Restock date tracking", desc: "See the last service date for every location at a glance. Never let a machine go stale because it slipped your mind." },
               { icon: "👥", title: "Built-in CRM", desc: "Manage client contacts, log conversations, and track follow-ups — all linked directly to the machines at each location." },
-              { icon: "🏪", title: "Micro market & vending support", desc: "Works for smart micro markets, AI vending coolers, and traditional machines. One platform for your whole operation." },
+              { icon: "📝", title: "Contracts", desc: "Create and send professional placement contracts to location owners in minutes — no lawyer needed. Track signatures and renewals in one place." },
               { icon: "📍", title: "Location analytics (coming soon)", desc: "Data-driven insights on each placement — foot traffic, revenue benchmarks, and recommendations to help you grow your route." },
               { icon: "📤", title: "CSV import & export", desc: "Bring in your existing machine list and client data from any spreadsheet. Your data is always yours to take with you." },
             ].map(({ icon, title, desc }) => (
@@ -351,7 +351,7 @@ export default function Home() {
             <img src={APP_MOCKUP} alt="Provendy platform showing machine and client management" className="w-full object-cover" />
           </div>
           <div className="flex flex-wrap justify-center gap-2 mt-8">
-            {["Micro markets", "AI coolers", "Traditional vending", "Any location type"].map((tag) => (
+            {["CRM & Contacts", "Contracts", "Inventory", "Scout AI"].map((tag) => (
               <span key={tag} className="px-3 py-1.5 rounded-full text-sm font-medium" style={{ background: "rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.85)", border: "1px solid rgba(255,255,255,0.15)" }}>{tag}</span>
             ))}
           </div>
