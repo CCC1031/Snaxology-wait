@@ -131,7 +131,7 @@ export default function Home() {
               onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
               onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
             >
-              Get Access
+              See Plans
             </button>
           </div>
           <button className="md:hidden p-2 text-gray-600" onClick={() => setNavOpen(!navOpen)}>
@@ -164,7 +164,7 @@ export default function Home() {
               }}
               onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
               onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
-            >Get Access</button>
+            >See Plans</button>
           </div>
         )}
       </nav>
@@ -210,7 +210,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
             <button onClick={() => scrollTo("pricing")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
-              Get Access →
+              See Plans →
             </button>
             <button onClick={() => scrollTo("how")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm border border-white/40 bg-white/10 hover:bg-white/20 transition-all active:scale-95">
               See how it works ↓
@@ -570,7 +570,7 @@ export default function Home() {
               (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.02) translateY(-1px)";
             }}
           >
-            Get Access
+            See Plans
             <span className="inline-block transition-transform duration-200 group-hover:translate-x-1" style={{ fontSize: "1rem" }}>→</span>
           </button>
         </div>
