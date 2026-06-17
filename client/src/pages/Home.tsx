@@ -27,7 +27,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-const FORMSPREE_ID = "YOUR_FORM_ID"; // replace with your Formspree form ID from formspree.io
+const FORMSPREE_ID = "xnjyrelo";
 
 export default function Home() {
   const [email, setEmail] = useState("");
