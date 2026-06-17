@@ -494,34 +494,34 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <a href="https://app.provendy.ai/" className="block text-center py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90 shadow-lg" style={{ background: "white", color: TEAL }}>Start Free Trial — 14 Days Free</a>
+              <a href="https://app.provendy.ai/" className="block text-center py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90 shadow-lg" style={{ background: "white", color: TEAL }}>Start Free Trial — 7 Days Free</a>
             </div>
 
-            {/* ENTERPRISE */}
+            {/* WEBSITE CREATION ADD-ON */}
             <div className="bg-white rounded-2xl border border-gray-200 p-8 flex flex-col shadow-sm">
               <div className="mb-6">
-                <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Enterprise</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Add-On</span>
                 <div className="mt-2 flex items-end gap-1">
-                  <span className="text-4xl font-extrabold text-gray-900">Custom</span>
+                  <span className="text-4xl font-extrabold text-gray-900">$497</span>
+                  <span className="text-gray-400 text-sm mb-1">one-time</span>
                 </div>
-                <p className="text-gray-500 text-sm mt-2">For large operators running 100+ machines across multiple properties.</p>
+                <p className="text-gray-500 text-sm mt-2">We build your professional business website — done for you, ready to convert.</p>
               </div>
               <ul className="space-y-3 flex-1 mb-8">
                 {[
-                  "Everything in Pro",
-                  "Dedicated account manager",
-                  "Faster dedicated support",
-                  "White-label / private label options",
-                  "Custom integrations (case-by-case)",
-                  "Early access to new features",
-                  "Feature roadmap prioritization",
+                  "Custom-designed, mobile-ready website",
+                  "Your branding, colors & logo",
+                  "Lead capture form & contact page",
+                  "Google Business & SEO setup",
+                  "Delivered in 5–7 business days",
+                  "1 round of revisions included",
                 ].map(f => (
                   <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
                     <span className="mt-0.5 text-green-500 flex-shrink-0">✓</span>{f}
                   </li>
                 ))}
               </ul>
-              <a href="mailto:hello@provendy.ai" className="block text-center py-3 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-gray-50" style={{ borderColor: "#e5e7eb", color: "#374151" }}>Contact Sales</a>
+              <a href="mailto:hello@provendy.ai" className="block text-center py-3 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-gray-50" style={{ borderColor: "#E31E24", color: "#E31E24" }}>Get Your Website →</a>
             </div>
 
           </div>
