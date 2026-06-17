@@ -111,29 +111,28 @@ export default function Home() {
             {[{ label: "How it works", id: "how" }, { label: "Features", id: "features" }, { label: "FAQ", id: "faq" }].map(({ label, id }) => (
               <button key={id} onClick={() => scrollTo(id)} className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">{label}</button>
             ))}
-            <a
-              href="https://app.provendy.ai/"
+            <button
+              onClick={() => scrollTo("pricing")}
               className="text-sm font-semibold text-white px-4 py-2 rounded-full"
               style={{
                 background: TEAL,
                 transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
-                display: "inline-block",
               }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.04) translateY(-1px)";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
-                (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1.08)";
+                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)";
+                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
+                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1.08)";
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1) translateY(0)";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
-                (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1)";
+                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1) translateY(0)";
+                (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
+                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1)";
               }}
-              onMouseDown={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97)"; }}
-              onMouseUp={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.04) translateY(-1px)"; }}
+              onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
+              onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
             >
               Get Access
-            </a>
+            </button>
           </div>
           <button className="md:hidden p-2 text-gray-600" onClick={() => setNavOpen(!navOpen)}>
             <div className="w-5 h-0.5 bg-current mb-1" /><div className="w-5 h-0.5 bg-current mb-1" /><div className="w-5 h-0.5 bg-current" />
@@ -146,27 +145,26 @@ export default function Home() {
                 {id === "how" ? "How it works" : id.charAt(0).toUpperCase() + id.slice(1)}
               </button>
             ))}
-            <a
-              href="https://app.provendy.ai/"
+            <button
+              onClick={() => { scrollTo("pricing"); setNavOpen(false); }}
               className="text-sm font-semibold text-white px-4 py-2 rounded-full w-fit"
               style={{
                 background: TEAL,
                 transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
-                display: "inline-block",
               }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.04) translateY(-1px)";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
-                (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1.08)";
+                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)";
+                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
+                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1.08)";
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1) translateY(0)";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
-                (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1)";
+                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1) translateY(0)";
+                (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
+                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1)";
               }}
-              onMouseDown={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97)"; }}
-              onMouseUp={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.04) translateY(-1px)"; }}
-            >Get Access</a>
+              onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
+              onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
+            >Get Access</button>
           </div>
         )}
       </nav>
@@ -211,9 +209,9 @@ export default function Home() {
             Track your inventory, manage your clients, and know exactly when each machine was last stocked — all in one platform built for vending operators.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
-            <a href="https://app.provendy.ai/" className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
+            <button onClick={() => scrollTo("pricing")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
               Get Access →
-            </a>
+            </button>
             <button onClick={() => scrollTo("how")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm border border-white/40 bg-white/10 hover:bg-white/20 transition-all active:scale-95">
               See how it works ↓
             </button>
@@ -546,35 +544,35 @@ export default function Home() {
         <div className="max-w-lg mx-auto px-5 text-center">
           <h2 className="text-4xl font-extrabold text-white mb-4">Ready to run your route smarter?</h2>
           <p className="text-red-200/70 mb-10 text-base leading-relaxed">
-            Start with a 14-day free trial. No commitment, cancel anytime.
+            Start with a 7-day free trial. No commitment, cancel anytime.
           </p>
-          <a
-            href="https://app.provendy.ai/"
+          <button
+            onClick={() => scrollTo("pricing")}
             className="inline-flex items-center justify-center gap-2 w-full max-w-sm py-4 rounded-xl font-semibold text-white text-base group"
             style={{
               background: TEAL,
               transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
             }}
             onMouseEnter={e => {
-              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.02) translateY(-1px)";
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = `0 8px 24px rgba(227,30,36,0.45)`;
-              (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1.08)";
+              (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.02) translateY(-1px)";
+              (e.currentTarget as HTMLButtonElement).style.boxShadow = `0 8px 24px rgba(227,30,36,0.45)`;
+              (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1.08)";
             }}
             onMouseLeave={e => {
-              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1) translateY(0)";
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
-              (e.currentTarget as HTMLAnchorElement).style.filter = "brightness(1)";
+              (e.currentTarget as HTMLButtonElement).style.transform = "scale(1) translateY(0)";
+              (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
+              (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1)";
             }}
             onMouseDown={e => {
-              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(0.97) translateY(0)";
+              (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97) translateY(0)";
             }}
             onMouseUp={e => {
-              (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.02) translateY(-1px)";
+              (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.02) translateY(-1px)";
             }}
           >
             Get Access
             <span className="inline-block transition-transform duration-200 group-hover:translate-x-1" style={{ fontSize: "1rem" }}>→</span>
-          </a>
+          </button>
         </div>
       </section>
 
