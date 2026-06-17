@@ -449,13 +449,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 shadow border border-gray-100">
-                <span className="text-2xl">🤖</span>
-                <div>
-                  <div className="text-xs font-bold text-gray-900">Powered by Bland AI</div>
-                  <div className="text-xs text-gray-400">The same voice your prospects hear</div>
-                </div>
-              </div>
             </div>
             {/* Copy column */}
             <div className="order-1 md:order-2">
