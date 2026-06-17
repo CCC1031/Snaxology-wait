@@ -418,19 +418,94 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── AI RECEPTIONIST ─────────────────────────────────────────────── */}
+      <section className="py-20" style={{ background: "white" }}>
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Visual column */}
+            <div className="flex flex-col gap-4 order-2 md:order-1">
+              <div className="rounded-2xl border border-gray-100 p-5 shadow-sm" style={{ background: "oklch(0.99 0.003 80)" }}>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg flex items-center justify-center text-lg" style={{ background: TEAL_LIGHT }}>📞</div>
+                  <div>
+                    <div className="font-bold text-gray-900 text-sm">Get a call from the agent</div>
+                    <div className="text-xs text-gray-400">Hear exactly what your prospects hear</div>
+                  </div>
+                </div>
+                <div className="h-px bg-gray-100 mb-3" />
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg flex items-center justify-center text-lg" style={{ background: TEAL_LIGHT }}>📲</div>
+                  <div>
+                    <div className="font-bold text-gray-900 text-sm">Quick Outbound Call</div>
+                    <div className="text-xs text-gray-400">Dial any number — no CRM contact needed</div>
+                  </div>
+                </div>
+                <div className="h-px bg-gray-100 mb-3" />
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg flex items-center justify-center text-lg" style={{ background: TEAL_LIGHT }}>📝</div>
+                  <div>
+                    <div className="font-bold text-gray-900 text-sm">Custom Call Script</div>
+                    <div className="text-xs text-gray-400">Set what the AI says — uses your tone, your pitch</div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 shadow border border-gray-100">
+                <span className="text-2xl">🤖</span>
+                <div>
+                  <div className="text-xs font-bold text-gray-900">Powered by Bland AI</div>
+                  <div className="text-xs text-gray-400">The same voice your prospects hear</div>
+                </div>
+              </div>
+            </div>
+            {/* Copy column */}
+            <div className="order-1 md:order-2">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>AI Receptionist</span>
+              <h2 className="text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+                An AI agent that makes calls <span style={{ color: TEAL }}>for you.</span>
+              </h2>
+              <p className="text-gray-500 text-base leading-relaxed mb-6">
+                Stop spending hours cold calling locations. Your AI Receptionist dials prospects, delivers your pitch, and handles objections — using the script you write. Available on the Pro plan.
+              </p>
+              <ul className="space-y-2.5 mb-8">
+                {[
+                  "Calls prospects and pitches your vending placement",
+                  "Uses your custom script with {name} & {business} variables",
+                  "Outbound calls from your saved contact list",
+                  "Test the agent by calling yourself first",
+                ].map(f => (
+                  <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-0.5 flex-shrink-0" style={{ color: TEAL }}>✓</span>{f}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://app.provendy.ai/checkout/pro"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm"
+                style={{ background: TEAL, transition: "filter 160ms ease-out" }}
+                onMouseEnter={e => (e.currentTarget.style.filter = "brightness(1.12)")}
+                onMouseLeave={e => (e.currentTarget.style.filter = "brightness(1)")}
+              >
+                Try AI Receptionist
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── PRICING ──────────────────────────────────────────────────────── */}
       <section id="pricing" className="py-24" style={{ background: "oklch(0.97 0.006 80)" }}>
         <div className="max-w-6xl mx-auto px-5">
           <div className="text-center mb-14">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>Pricing</span>
             <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Simple, transparent pricing</h2>
-            <p className="text-gray-500 text-base max-w-md mx-auto">Start free for 14 days. Upgrade anytime.</p>
+            <p className="text-gray-500 text-base max-w-md mx-auto">Start free for 7 days. Upgrade anytime.</p>
           </div>
 
           {/* Free trial banner */}
           <div className="flex items-center justify-center gap-3 mb-10 py-3 px-6 rounded-xl max-w-xl mx-auto" style={{ background: TEAL_LIGHT }}>
             <span className="text-2xl">🎁</span>
-            <p className="text-sm font-semibold" style={{ color: TEAL }}>14-day free trial — full Pro access</p>
+            <p className="text-sm font-semibold" style={{ color: TEAL }}>7-day free trial — full Pro access</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
