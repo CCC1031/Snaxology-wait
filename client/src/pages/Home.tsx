@@ -140,28 +140,13 @@ export default function Home() {
             {[{ label: "How it works", id: "how" }, { label: "Features", id: "features" }, { label: "FAQ", id: "faq" }].map(({ label, id }) => (
               <button key={id} onClick={() => scrollTo(id)} className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">{label}</button>
             ))}
-            <button
-              onClick={() => scrollTo("pricing")}
+            <a
+              href="https://app.provendy.ai/signup"
               className="text-sm font-semibold text-white px-4 py-2 rounded-full"
-              style={{
-                background: TEAL,
-                transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
-                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1.08)";
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1) translateY(0)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
-                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1)";
-              }}
-              onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
-              onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
+              style={{ background: TEAL }}
             >
-              See Plans
-            </button>
+              Get Access
+            </a>
           </div>
           <button className="md:hidden p-2 text-gray-600" onClick={() => setNavOpen(!navOpen)}>
             <div className="w-5 h-0.5 bg-current mb-1" /><div className="w-5 h-0.5 bg-current mb-1" /><div className="w-5 h-0.5 bg-current" />
@@ -174,26 +159,12 @@ export default function Home() {
                 {id === "how" ? "How it works" : id.charAt(0).toUpperCase() + id.slice(1)}
               </button>
             ))}
-            <button
-              onClick={() => { scrollTo("pricing"); setNavOpen(false); }}
+            <a
+              href="https://app.provendy.ai/signup"
               className="text-sm font-semibold text-white px-4 py-2 rounded-full w-fit"
-              style={{
-                background: TEAL,
-                transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 6px 20px rgba(227,30,36,0.45)";
-                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1.08)";
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLButtonElement).style.transform = "scale(1) translateY(0)";
-                (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
-                (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1)";
-              }}
-              onMouseDown={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97)"; }}
-              onMouseUp={e => { (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04) translateY(-1px)"; }}
-            >See Plans</button>
+              style={{ background: TEAL }}
+              onClick={() => setNavOpen(false)}
+            >Get Access</a>
           </div>
         )}
       </nav>
@@ -238,9 +209,9 @@ export default function Home() {
             Track your inventory, manage your clients, and know exactly when each machine was last stocked — all in one platform built for vending operators.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
-            <button onClick={() => scrollTo("pricing")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
-              See Plans →
-            </button>
+            <a href="https://app.provendy.ai/signup" className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
+              Get Early Access →
+            </a>
             <button onClick={() => scrollTo("how")} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm border border-white/40 bg-white/10 hover:bg-white/20 transition-all active:scale-95">
               See how it works ↓
             </button>
@@ -516,112 +487,46 @@ export default function Home() {
       </section>
 
       {/* ── PRICING ──────────────────────────────────────────────────────── */}
+      {/* EARLY ACCESS — pricing hidden until Stripe is live */}
       <section id="pricing" className="py-24" style={{ background: "oklch(0.97 0.006 80)" }}>
-        <div className="max-w-6xl mx-auto px-5">
-          <div className="text-center mb-14">
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>Pricing</span>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-3">Simple, transparent pricing</h2>
-            <p className="text-gray-500 text-base max-w-md mx-auto">Start free for 7 days. Upgrade anytime.</p>
-          </div>
-
-          {/* Free trial banner */}
-          <div className="flex items-center justify-center gap-3 mb-10 py-3 px-6 rounded-xl max-w-xl mx-auto" style={{ background: TEAL_LIGHT }}>
-            <span className="text-2xl">🎁</span>
-            <p className="text-sm font-semibold" style={{ color: TEAL }}>7-day free trial — full Pro access</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-
-            {/* STARTER */}
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 flex flex-col shadow-sm">
-              <div className="mb-6">
-                <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Starter</span>
-                <div className="mt-2 flex items-end gap-1">
-                  <span className="text-4xl font-extrabold text-gray-900">$9.99</span>
-                  <span className="text-gray-400 text-sm mb-1">/month</span>
-                </div>
-                <p className="text-gray-500 text-sm mt-2">Perfect for solo operators and teams just getting started.</p>
-              </div>
-              <ul className="space-y-3 flex-1 mb-8">
-                {[
-                  "Basic inventory tracking across your machines",
-                  "Support for 1–2 locations",
-                  "Mobile app access (Provendy)",
-                  "Essential reports and dashboards",
-                  "Email support",
-                  "Data export (CSV format)",
-                ].map(f => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="mt-0.5 text-green-500 flex-shrink-0">✓</span>{f}
-                  </li>
-                ))}
-              </ul>
-              <a href="https://app.provendy.ai/checkout/starter" className="block text-center py-3 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-gray-50" style={{ borderColor: "#e5e7eb", color: "#374151" }}>Start Free Trial</a>
-            </div>
-
-            {/* PRO — highlighted */}
-            <div className="relative rounded-2xl p-8 flex flex-col shadow-xl" style={{ background: "#8B0000", border: "2px solid #6b0000" }}>
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="bg-yellow-400 text-yellow-900 text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow">Most Popular</span>
-              </div>
-              <div className="mb-6">
-                <span className="text-xs font-bold uppercase tracking-widest text-red-100">Pro</span>
-                <div className="mt-2 flex items-end gap-1">
-                  <span className="text-4xl font-extrabold text-white">$19.99</span>
-                  <span className="text-red-200 text-sm mb-1">/month</span>
-                </div>
-                <p className="text-red-100 text-sm mt-2">For serious operators scaling their business.</p>
-              </div>
-              <ul className="space-y-3 flex-1 mb-8">
-                {[
-                  "Everything in Starter",
-                  "AI Voice Agent (Bland AI) — handles calls & schedules refills",
-                  "Unlimited locations",
-                  "Advanced analytics & demand forecasting",
-                  "Full CRM Suite: notes, workflow, vendor comms",
-                  "Route optimization & driver dispatch",
-                  "Multi-user access & team collaboration",
-                  "Priority email support",
-                  "Advanced reporting & custom metrics",
-                ].map(f => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-white">
-                    <span className="mt-0.5 text-yellow-300 flex-shrink-0">✓</span>{f}
-                  </li>
-                ))}
-              </ul>
-              <a href="https://app.provendy.ai/checkout/pro" className="block text-center py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90 shadow-lg" style={{ background: "white", color: TEAL }}>Start Free Trial — 7 Days Free</a>
-            </div>
-
-            {/* WEBSITE CREATION ADD-ON */}
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 flex flex-col shadow-sm">
-              <div className="mb-6">
-                <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Add-On</span>
-                <div className="mt-2 flex items-end gap-1">
-                  <span className="text-4xl font-extrabold text-gray-900">$497</span>
-                  <span className="text-gray-400 text-sm mb-1">one-time</span>
-                </div>
-                <p className="text-gray-500 text-sm mt-2">We build your professional business website — done for you, ready to convert.</p>
-              </div>
-              <ul className="space-y-3 flex-1 mb-8">
-                {[
-                  "Custom-designed, mobile-ready website",
-                  "Your branding, colors & logo",
-                  "Lead capture form & contact page",
-                  "Google Business & SEO setup",
-                  "Delivered in 5–7 business days",
-                  "1 round of revisions included",
-                ].map(f => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="mt-0.5 text-green-500 flex-shrink-0">✓</span>{f}
-                  </li>
-                ))}
-              </ul>
-              <a href="mailto:hello@provendy.ai" className="block text-center py-3 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-gray-50" style={{ borderColor: "#E31E24", color: "#E31E24" }}>Get Your Website →</a>
-            </div>
-
+        <div className="max-w-2xl mx-auto px-5 text-center">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: TEAL_LIGHT, color: TEAL }}>Early Access</span>
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Be first in the door</h2>
+          <p className="text-gray-500 text-base max-w-md mx-auto mb-10">
+            Provendy is currently invite-only while we onboard our founding operators. Join the waitlist and we'll reach out as soon as a spot opens up.
+          </p>
+          <div className="bg-white rounded-2xl border border-gray-200 p-10 shadow-sm">
+            <ul className="space-y-3 text-sm text-gray-600 text-left max-w-xs mx-auto mb-8">
+              {[
+                "CRM — contacts, deals, notes & activity log",
+                "AI Voice Agent for outbound calls",
+                "Scout AI — find & qualify new locations",
+                "45-Day Launch Plan & Mindset Vault",
+                "Mobile app (iOS & Android)",
+                "Contracts & eSign",
+              ].map(f => (
+                <li key={f} className="flex items-start gap-2">
+                  <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>{f}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="https://app.provendy.ai/signup"
+              className="inline-block w-full max-w-xs py-4 rounded-xl font-bold text-white text-base transition-all hover:opacity-90 shadow-lg text-center"
+              style={{ background: TEAL }}
+            >
+              Request Early Access →
+            </a>
+            <p className="text-xs text-gray-400 mt-4">We review applications and send access within 24 hours.</p>
           </div>
         </div>
       </section>
+
+      {/* PRICING — hidden until Stripe is live
+      <section id="pricing" className="py-24" style={{ background: "oklch(0.97 0.006 80)" }}>
+        Starter $9.99 / Pro $19.99 / Add-On $497 — see git history to restore
+      </section>
+      */}
 
       {/* ── FAQ ─────────────────────────────────────────────────────────── */}
       <section id="faq" className="py-20 bg-background">
@@ -641,35 +546,15 @@ export default function Home() {
         <div className="max-w-lg mx-auto px-5 text-center">
           <h2 className="text-4xl font-extrabold text-white mb-4">Ready to run your route smarter?</h2>
           <p className="text-red-200/70 mb-10 text-base leading-relaxed">
-            Start with a 7-day free trial. No commitment, cancel anytime.
+            We're onboarding founding operators now. Apply for early access today.
           </p>
-          <button
-            onClick={() => scrollTo("pricing")}
-            className="inline-flex items-center justify-center gap-2 w-full max-w-sm py-4 rounded-xl font-semibold text-white text-base group"
-            style={{
-              background: TEAL,
-              transition: "transform 160ms cubic-bezier(0.23,1,0.32,1), box-shadow 160ms cubic-bezier(0.23,1,0.32,1), filter 160ms cubic-bezier(0.23,1,0.32,1)",
-            }}
-            onMouseEnter={e => {
-              (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.02) translateY(-1px)";
-              (e.currentTarget as HTMLButtonElement).style.boxShadow = `0 8px 24px rgba(227,30,36,0.45)`;
-              (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1.08)";
-            }}
-            onMouseLeave={e => {
-              (e.currentTarget as HTMLButtonElement).style.transform = "scale(1) translateY(0)";
-              (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
-              (e.currentTarget as HTMLButtonElement).style.filter = "brightness(1)";
-            }}
-            onMouseDown={e => {
-              (e.currentTarget as HTMLButtonElement).style.transform = "scale(0.97) translateY(0)";
-            }}
-            onMouseUp={e => {
-              (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.02) translateY(-1px)";
-            }}
+          <a
+            href="https://app.provendy.ai/signup"
+            className="inline-flex items-center justify-center gap-2 w-full max-w-sm py-4 rounded-xl font-semibold text-white text-base hover:opacity-90 transition-opacity"
+            style={{ background: TEAL }}
           >
-            See Plans
-            <span className="inline-block transition-transform duration-200 group-hover:translate-x-1" style={{ fontSize: "1rem" }}>→</span>
-          </button>
+            Request Early Access →
+          </a>
         </div>
       </section>
 
