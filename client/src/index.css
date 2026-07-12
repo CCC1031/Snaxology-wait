@@ -199,3 +199,57 @@
     }
   }
 }
+/* ── Intro splash (van video, once per session) ─────────────────────── */
+.intro-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #f3f0f1; /* matches the video's off-white background so no edge shows */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+}
+.intro-splash--hide {
+  opacity: 0;
+}
+.intro-splash__video {
+  width: min(58vw, 58vh, 340px);
+  height: min(58vw, 58vh, 340px);
+  object-fit: cover;
+  border-radius: 0;
+  /* Feather all four edges so the video dissolves into the background
+     (no hard rectangular outline, regardless of frame-to-frame edge color). */
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-composite: intersect;
+}
+.intro-splash__skip {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  background: rgba(0, 0, 0, 0.04);
+  color: #444;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.intro-splash__skip:hover {
+  background: rgba(0, 0, 0, 0.09);
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro-splash {
+    transition: none;
+  }
+}

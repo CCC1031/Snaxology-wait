@@ -5,6 +5,7 @@
  */
 import { useState } from "react";
 import ClippedVideoTab from "@/components/ui/clipped-video-tab";
+import HeroVideos from "@/components/HeroVideos";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663676595920/8BWP2AddNeLcVoRQGif8V3/snaxology-hero-bg-red-NwwgpHGHvtSYgTRFLB9aav.webp";
 const APP_MOCKUP = "https://d2xsxph8kpxj0f.cloudfront.net/310519663676595920/8BWP2AddNeLcVoRQGif8V3/snaxology-app-mockup-v3-KTBwzTLaMHLnuryAASwghL.webp";
@@ -178,17 +179,14 @@ export default function Home() {
           minHeight: "640px",
         }}
       >
-        {/* Background video */}
-        <video
-          src="https://res.cloudinary.com/do9un1nb1/video/upload/v1781566412/snaxology_hero_video.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+        {/* Background: two videos crossfading on a loop */}
+        <HeroVideos />
+        {/* Dark overlay so text is readable over the (bright) hero videos.
+            Inline style avoids any Tailwind v4 gradient-class mismatch. */}
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.82), rgba(0,0,0,0.72) 50%, rgba(0,0,0,0.88))" }}
         />
-        {/* Dark overlay so text is readable */}
-        <div className="absolute inset-0 bg-black/60" />
         {/* Centered hero content */}
         <div className="relative z-10 max-w-4xl mx-auto px-5 pt-20 pb-28 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-sm font-medium mb-8" style={{ background: "rgba(227,30,36,0.25)", color: "#ff8a8e" }}>
@@ -206,7 +204,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-lg text-white/80 max-w-xl mx-auto mb-10 leading-relaxed">
-            Track your inventory, manage your clients, and know exactly when each machine was last stocked — all in one platform built for vending operators.
+            The software vending operators actually need, built by one of us.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
             <a href="https://app.provendy.ai/signup" className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white text-sm transition-all hover:opacity-90 active:scale-95" style={{ background: TEAL }}>
