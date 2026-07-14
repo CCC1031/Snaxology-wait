@@ -8,7 +8,7 @@ import ClippedVideoTab from "@/components/ui/clipped-video-tab";
 import HeroVideos from "@/components/HeroVideos";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663676595920/8BWP2AddNeLcVoRQGif8V3/snaxology-hero-bg-red-NwwgpHGHvtSYgTRFLB9aav.webp";
-const APP_MOCKUP = "https://d2xsxph8kpxj0f.cloudfront.net/310519663676595920/8BWP2AddNeLcVoRQGif8V3/snaxology-app-mockup-v3-KTBwzTLaMHLnuryAASwghL.webp";
+const APP_MOCKUP = "/app-mockup.jpg";
 
 const TEAL = "#E31E24";
 const TEAL_LIGHT = "#fde8e9";
@@ -193,9 +193,8 @@ export default function Home() {
       {/* ── NAV ─────────────────────────────────────────────────────────── */}
       <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-gray-100" style={{ background: 'oklch(0.978 0.006 80 / 0.92)', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
         <div className="w-full px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => scrollTo("hero")}>
-              <div className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-black text-xl" style={{ background: TEAL }}>P</div>
-            <span className="font-bold text-lg text-gray-900">Provendy</span>
+          <div className="flex items-center cursor-pointer" onClick={() => scrollTo("hero")}>
+            <img src="/provendy-wordmark.png" alt="Provendy" className="h-8 w-auto object-contain" />
           </div>
           <div className="hidden md:flex items-center gap-7">
             {[{ label: "How it works", id: "how" }, { label: "Features", id: "features" }, { label: "FAQ", id: "faq" }].map(({ label, id }) => (
@@ -271,11 +270,6 @@ export default function Home() {
             <a href="https://app.provendy.ai/signup" className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full font-bold text-white text-base transition-all hover:opacity-90 active:scale-95 shadow-xl" style={{ background: TEAL, boxShadow: "0 10px 30px rgba(227,30,36,0.45)" }}>
               Start my free trial →
             </a>
-            {/* Proof adjacency — social proof right next to the CTA */}
-            <div className="flex items-center gap-2 text-white/75 text-sm">
-              <span style={{ color: "#ffcf4d" }}>★★★★★</span>
-              <span>Loved by <strong className="text-white">1,200+</strong> vending operators</span>
-            </div>
             <button onClick={() => scrollTo("how")} className="text-sm font-medium text-white/70 hover:text-white underline underline-offset-4 transition-colors">
               or see how it works
             </button>
@@ -289,7 +283,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TRUST BAR: logos + review badges (#14, #16) ─────────────────── */}
+      {/* ── TRUST BAR — hidden until real logos/reviews exist. Flip false→true to show. */}
+      {false && (
       <section className="py-10 bg-white border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-5">
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">
@@ -317,6 +312,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ── PROBLEM ─────────────────────────────────────────────────────── */}
       <section className="py-20 bg-background">
@@ -362,7 +358,8 @@ export default function Home() {
       <section className="py-20" style={{ background: TEAL_DEEP }}>
         <div className="max-w-5xl mx-auto px-5">
 
-          {/* Stats bar — [replace with real numbers] (#13) */}
+          {/* Stats bar — hidden until real numbers exist. Flip false→true to show. */}
+          {false && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {[
               { n: "1,200+", l: "operators on Provendy" },
@@ -376,6 +373,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+          )}
 
           <div className="text-center mb-12">
             <p className="text-sm font-semibold text-red-300 mb-3 uppercase tracking-widest">From operators in the field</p>
@@ -421,18 +419,17 @@ export default function Home() {
       <section className="py-20 bg-white border-y border-gray-100">
         <div className="max-w-3xl mx-auto px-5">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-            {/* [FOUNDER PHOTO] — replace with a real headshot */}
-            <div className="w-28 h-28 rounded-2xl flex-shrink-0 flex items-center justify-center text-white text-3xl font-black" style={{ background: TEAL }}>P</div>
+            <img src="/provendy-logo.png" alt="Provendy" className="h-28 w-auto flex-shrink-0 object-contain" />
             <div>
               <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style={{ background: TEAL_LIGHT, color: TEAL }}>Why we built this</span>
               <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 leading-snug">Built by an operator, not a software company.</h2>
               <p className="text-gray-600 text-[15px] leading-relaxed mb-3">
-                I ran my own vending route for years — chasing leads on sticky notes, losing track of follow-ups, and losing deals I should've closed. The tools out there were built for big companies optimizing machines they already had. Nothing helped me actually <strong className="text-gray-800">win new locations.</strong>
+                I ran my own vending route for about a year, running the whole thing out of Excel. I lost track of follow-ups and let deals slip that I should've closed. The tools out there were built for big companies optimizing machines they already had. Nothing helped me actually <strong className="text-gray-800">win new locations.</strong>
               </p>
               <p className="text-gray-600 text-[15px] leading-relaxed">
-                So I built Provendy — the app I wish I'd had on day one. Every feature comes from a real problem on a real route.
+                So I built Provendy, the app I wish I'd had on day one. Every feature comes from a real problem on a real route.
               </p>
-              <p className="mt-4 text-sm font-semibold text-gray-900">— [Founder Name], Founder of Provendy</p>
+              <p className="mt-4 text-sm font-semibold text-gray-900">Clarence, Founder of Provendy</p>
             </div>
           </div>
         </div>
@@ -491,7 +488,7 @@ export default function Home() {
       </section>
 
       {/* ── APP PREVIEW ─────────────────────────────────────────────────── */}
-      <section className="py-20" style={{ background: TEAL_DARK }}>
+      <section className="py-20" style={{ background: TEAL_DEEP }}>
         <div className="max-w-5xl mx-auto px-5">
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: "rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.9)" }}>Preview</span>
@@ -499,7 +496,7 @@ export default function Home() {
             <p className="text-red-200/70 text-sm">Works on your phone in the field and your laptop back at the office</p>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img src={APP_MOCKUP} alt="Provendy platform showing machine and client management" className="w-full object-cover" />
+            <img src={APP_MOCKUP} alt="Provendy app — dashboard and route view" className="w-full h-auto block" />
           </div>
           <div className="flex flex-wrap justify-center gap-2 mt-8">
             {["CRM & Contacts", "Proposals", "AI Calls", "Scout AI"].map((tag) => (
@@ -831,7 +828,7 @@ export default function Home() {
       <footer className="py-10 bg-white border-t border-gray-100">
         <div className="w-full px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-black text-sm" style={{ background: TEAL }}>P</div>
+            <img src="/provendy-logo.png" alt="Provendy" className="h-8 w-auto object-contain" />
             <div>
               <p className="font-bold text-sm text-gray-900">Provendy</p>
               <p className="text-xs text-gray-400">© 2026 Provendy. All rights reserved.</p>
