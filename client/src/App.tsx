@@ -6,12 +6,16 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import IntroSplash from "./components/IntroSplash";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/privacy"} component={Privacy} />
+      <Route path={"/terms"} component={Terms} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

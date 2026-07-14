@@ -840,8 +840,8 @@ export default function Home() {
             </div>
           </div>
           <div className="flex gap-5 text-sm text-gray-500">
-            <a href="#" className="hover:text-gray-800 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-gray-800 transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-gray-800 transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-gray-800 transition-colors">Terms</a>
             <button onClick={() => { setContactOpen(true); setContactSent(false); }} className="hover:text-gray-800 transition-colors">Contact</button>
           </div>
         </div>
