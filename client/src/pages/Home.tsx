@@ -85,7 +85,12 @@ export default function Home() {
   const [showStickyCTA, setShowStickyCTA] = useState(false);
   const [exitOpen, setExitOpen] = useState(false);
   useEffect(() => {
-    const onScroll = () => setShowStickyCTA(window.scrollY > 700);
+    const onScroll = () => {
+      const d = document.documentElement;
+      // Hide the sticky bar near the bottom so it doesn't cover the final CTA + footer.
+      const nearBottom = window.scrollY + window.innerHeight >= d.scrollHeight - 560;
+      setShowStickyCTA(window.scrollY > 700 && !nearBottom);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     const onOut = (e: MouseEvent) => {
       if (e.clientY <= 0 && window.innerWidth > 768 && !sessionStorage.getItem("provendy_exit_shown")) {
@@ -825,7 +830,7 @@ export default function Home() {
       )}
 
       {/* ── FOOTER ──────────────────────────────────────────────────────── */}
-      <footer className="py-10 bg-white border-t border-gray-100">
+      <footer className="py-5 bg-white border-t border-gray-100">
         <div className="w-full px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
             <img src="/provendy-logo.png" alt="Provendy" className="h-8 w-auto object-contain" />
